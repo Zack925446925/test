@@ -78,58 +78,63 @@ def fun9(s):
         s=''
     return s
 
-def skin2mysql(df_all,df_check_all,df_times_all):
+def skin2mysql():
     day = time.strftime("%Y-%m-%d", time.localtime())
+    print(type(day))
     df = getdata(day)
     df = df.drop_duplicates()
     df = df.reset_index(drop=True)
+    print(df.shape)
+    print(df)
+
     #df_all = df_all
     db = pymysql.connect("localhost", "root", "qwer1234", "skin_database", charset="utf8")
     cursor = db.cursor()
-    sql='''insert ignore into skin(addDateTime测试时间,age实际年龄,birthDate,deviceNumber,nursingStatus0护理前，1护理后,skinAge皮肤年龄
-    ,skinElasticity弹性,skinOil油分计算后,skinOil2油分,skinPosition测试部位,telephone电话,userName,waterContent水分,名单客户)
+    sql = """replace into skin(addDateTime测试时间, age实际年龄, birthDate, deviceNumber, nursingStatus0护理前，1护理后, skinAge皮肤年龄,
+    skinElasticity弹性,skinOil油分计算后,skinOil2油分,skinPosition测试部位,telephone电话,userName,waterContent水分,名单客户,时间标签)
     values
-    {value}'''
-    sql1='''insert ignore into skin_check(姓名,测试时间,检查测试次数/脸颊为左脸,检查测试值,问题部位)
+    {value}"""
+    sql1 = """replace into skin_check_celiangzhi(姓名,测试时间,检查测试次数_脸颊为左脸,检查测试值,问题部位)
     values
-    {value}'''
-    sql2='''insert ignore into skin_check(姓名,测试时间,缺少次数/标准次数（10点前2次，11点-14点1次，17点-20点1次，20点之后2次）)
+    {value}"""
+    sql2 = """replace into skin_check_cishu(姓名,测试时间,缺少次数)
     values
-    {value}'''
-    cursor = db.cursor()
+    {value}"""
     #插入皮肤原始数据
     for i in range(len(df)):
-        judge = str(df.loc[i,'addDateTime/测试时间'])+ df.loc[i,'telephone/电话']
-        if judge not in df_all['telephone/电话'].values:
-            print(df.loc[i].values)
-            cursor.execute(sql.format(value=tuple(df.loc[i].values)))
-            db.commit()
-            df.loc[i, 'telephone/电话'] = judge
-            df_all = df_all.append(df.loc[i],ignore_index=True)
+        # judge = str(df.loc[i,'addDateTime/测试时间'])+ df.loc[i,'telephone/电话']
+        # if judge not in df_all['telephone/电话'].values:
+        #print(df.loc[i].values)
+        cursor.execute(sql.format(value=tuple(df.loc[i].values)))
+        db.commit()
+            # df.loc[i, 'telephone/电话'] = judge
+            # df_all = df_all.append(df.loc[i],ignore_index=True)
     
     #插入皮肤检查数据
-    df_check = check_data(day,df)
+    df_check = check_data([day],df)
     for i in range(len(df_check[0])):
-        judge = str(df_check[0].loc[i,'测试时间'])
-        if judge not in df_check_all['测试时间'].values:
-            cursor.execute(sql1.format(value=tuple(df_check[0].loc[i].values)))
-            db.commit()
-            df_check[0].loc[i, '测试时间'] = judge
-            df_check_all = df_check_all.append(df_check[0].loc[i],ignore_index=True)
+        # judge = str(df_check[0].loc[i,'测试时间'])
+        # if judge not in df_check_all['测试时间'].values:
+        print(df_check[0].loc[i].values)
+        cursor.execute(sql1.format(value=tuple(df_check[0].loc[i].values)))
+        db.commit()
+            # df_check[0].loc[i, '测试时间'] = judge
+            # df_check_all = df_check_all.append(df_check[0].loc[i],ignore_index=True)
     
     #插入次数检查数据
     for i in range(len(df_check[1])):
-        judge = str(df_check[1].loc[i,'测试时间']) + df_check[1].loc[i,'姓名']
-        if judge not in df_times_all['测试时间'].values:
-            cursor.execute(sql2.format(value=tuple(df_check[1].loc[i].values)))
-            db.commit()
-            df_check[1].loc[i, '测试时间'] = judge
-            df_times_all = df_times_all.append(df_check[1].loc[i],ignore_index=True)
+        # judge = str(df_check[1].loc[i,'测试时间']) + df_check[1].loc[i,'姓名']
+        # if judge not in df_times_all['测试时间'].values:
+        print(df_check[1].loc[i].values)
+        cursor.execute(sql2.format(value=tuple(df_check[1].loc[i].values)))
+        db.commit()
+            # df_check[1].loc[i, '测试时间'] = judge
+            # df_times_all = df_times_all.append(df_check[1].loc[i],ignore_index=True)
     cursor.close()
     db.close()
-    print(df_all)
-    time.sleep(7200)
-    return skin2mysql(df_all, df_check_all,df_times_all)
+    #print(df_all)
+    time.sleep(10)
+    return skin2mysql()
 def get_user():
     df = pd.read_excel('./受试者信息登记表20180320.xlsx')
     user_dic = {}
@@ -194,6 +199,12 @@ def fun7(s):
     return s.strftime("%Y-%m-%d %H:%M:%S")
 def fun8(t):
     return time.mktime(time.strptime(t,"%Y-%m-%d %H:%M:%S"))
+def fun10(s):
+    if s:
+        return str(s)
+    else:
+        return ''
+
 def check_data(days,df):
     df = df[(df['skinPosition/测试部位'] == '脸颊') | (df['skinPosition/测试部位'] == '颈部')]
     df['addDateTime/测试时间'] = df['addDateTime/测试时间'].apply(fun7)
@@ -223,7 +234,7 @@ def check_data(days,df):
                 question_num1 = []
                 label = fun6(num_dic,day)
                 if len(label)>0:
-                    all_times.append([name,day,label])
+                    all_times.append([name,day,str(label)])
                     df_all_times_question = pd.concat([df_all_times_question,df_day_name],ignore_index=True)
                 for num  in num_dic:
                     question_num = [name]
@@ -232,7 +243,7 @@ def check_data(days,df):
                         #print(per_time )
                         if len(per_time) < 6:
                             question_num.append(per_time[0])
-                            question_num.append(dict(df_day_name.loc[per_time]['skinPosition/测试部位'].value_counts()))
+                            question_num.append(str(dict(df_day_name.loc[per_time]['skinPosition/测试部位'].value_counts())))
                             question_num.append('没检查值波动')
                             question_num.append('没问题')
                             df_check_question = pd.concat([df_check_question,df_day_name.loc[per_time]],ignore_index=True)
@@ -246,14 +257,14 @@ def check_data(days,df):
                             if fun4(zuolian)>5:
                                 question_num.append(per_time[0])
                                 question_num.append('没问题')
-                                question_num.append(list(dff[dff['skinPosition/测试部位']=='脸颊']['waterContent/水分'].apply(fun5).values))
+                                question_num.append(str(list(dff[dff['skinPosition/测试部位']=='脸颊']['waterContent/水分'].apply(fun5).values)))
                                 question_num.append('左脸')
                                 df_check_question = pd.concat([df_check_question, dff],ignore_index=True)
 
                             elif fun4(youlian)>5:
                                 question_num.append(per_time[0])
                                 question_num.append('没问题')
-                                question_num.append(list(dff[dff['skinPosition/测试部位'] == '颈部']['waterContent/水分'].apply(fun5).values))
+                                question_num.append(str(list(dff[dff['skinPosition/测试部位'] == '颈部']['waterContent/水分'].apply(fun5).values)))
                                 question_num.append('右脸')
                                 df_check_question = pd.concat([df_check_question, dff],ignore_index=True)
                     if len(question_num)==5:
@@ -263,8 +274,11 @@ def check_data(days,df):
         df_check.loc[i] = question_num_all[i]
     for i in range(len(all_times)):
         df_all_times.loc[i] = all_times[i]
-    df_check_all['测试时间'] = pd.to_datetime(df_check_all['测试时间'])
-    df_all_times['测试时间'] = pd.to_datetime(df_all_times['测试时间'])
+    print(df_check, df_all_times)
+    df_check['测试时间'] = pd.to_datetime(df_check['测试时间'])
+    df_check['检查测试值'] = df_check['检查测试值'].apply(fun10)
+    #df_all_times['测试时间'] = pd.to_datetime(df_all_times['测试时间'])
+    #df_all_times['缺少次数/标准次数（10点前2次，11点-14点1次，17点-20点1次，20点之后2次）'] = df_all_times['缺少次数/标准次数（10点前2次，11点-14点1次，17点-20点1次，20点之后2次）'].apply(fun10)
     return df_check, df_all_times
 
 
@@ -275,4 +289,4 @@ if __name__ == '__main__':
                  "telephone/电话",  "waterContent/水分"])
     df_check_all = pd.DataFrame(columns=['a姓名,测试时间','检查测试次数/脸颊为左脸','检查测试值','问题部位'])
     df_check_all = pd.DataFrame(columns=['a姓名,测试时间','缺少次数/标准次数（10点前2次，11点-14点1次，17点-20点1次，20点之后2次）'])
-    skin2mysql(df_all,df_check_all,df_times_all)
+    skin2mysql()
