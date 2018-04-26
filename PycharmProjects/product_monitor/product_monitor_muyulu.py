@@ -389,10 +389,10 @@ def main():
     for name in word:
         # read_gz(filePath1 + name, filePath3 + name)
         # extract_data(filePath3 + name)
-        new_url_judge(filePath2 + name, filePath3 + name)
-        same_url_zd_judge(filePath3 + name)
-        diff_url_zd_judge(filePath3+name)
-        #url_pool(filePath2 + name,filePath3 + name)
+        # new_url_judge(filePath2 + name, filePath3 + name)
+        # same_url_zd_judge(filePath3 + name)
+        # diff_url_zd_judge(filePath3+name)
+        url_pool(filePath2 + name,filePath3 + name)
 
 if __name__ == '__main__':
     main()

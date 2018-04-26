@@ -8,9 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import random
 url = 'https://trends.so.com/'
-fpath1 = r'E:\01复硕正态\01数据爬取/'
-filepath = r'E:\01复硕正态\01数据爬取\06指数抓取\03 360指数/2013-2017/'
-#filepath = r'E:\01复硕正态\01数据爬取\06指数抓取\03 360指数/2018/'
+
 def is_element_exist_class_name(drive, s):
     flag = True
     try:
@@ -21,14 +19,14 @@ def is_element_exist_class_name(drive, s):
         return flag
 
 def login():
-    browser = webdriver.Chrome()
-    #browser = webdriver.PhantomJS()
+    #browser = webdriver.Chrome()
+    browser = webdriver.PhantomJS()
     browser.get(url)
     browser.maximize_window()
     time.sleep(2)
     wait = WebDriverWait(browser,10)
     account = []
-    with open(filepath+'account.txt') as f:
+    with open(fpath1+'account.txt') as f:
         accounts = f.readlines()
         for line in accounts:
             account.append(line.strip())
@@ -53,10 +51,10 @@ def login():
     time.sleep(random.randint(3, 5))
     return browser,wait
 def spider_index_year(browser,wait):
-    df = pd.read_excel(fpath1+'06指数抓取/采集关键词.xlsx')
-    if os.path.isfile(fpath1+'03 360指数/无效关键词.xlsx'):
-        os.remove(fpath1+'03 360指数/无效关键词.xlsx')
-    fff = open(fpath1+'06指数抓取/03 360指数/无效关键词.txt','a',encoding='utf-8')
+    df = pd.read_excel(fpath1+'/采集关键词.xlsx')
+    # if os.path.isfile(filepath+'/无效关键词.xlsx'):
+    #     os.remove(filepath+'/无效关键词.xlsx')
+    fff = open(filepath+'/无效关键词.xlsx','a',encoding='utf-8')
     for value in df['关键字'].values:
         try:
             input2 = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,'#header > div.wrap.clearfix > div.search > form > input[type="text"]')))
@@ -64,7 +62,7 @@ def spider_index_year(browser,wait):
             input2.send_keys(value)
             browser.find_element_by_css_selector('#header > div.wrap.clearfix > div.search > form > button').click()
             time.sleep(2)
-            element = wait.until(EC.presence_of_element_located(
+            element1 = wait.until(EC.presence_of_element_located(
                 (By.CSS_SELECTOR, '#trend_wrap > svg > g:nth-child(5) > g:nth-child(4) > text:nth-child(2)')))
             if not os.path.exists(filepath + value):
                 os.mkdir(filepath + value)
@@ -83,10 +81,14 @@ def spider_index_year(browser,wait):
             if os.path.isfile(filepath+value+'/baidu_index.txt'):
                 os.remove(filepath+value+'/baidu_index.txt')
             ff = open(filepath + value + '/baidu_index.txt', 'a', encoding='utf-8')
+
             for i in range(5):
                 element = wait.until(EC.presence_of_element_located(
-                    (By.CSS_SELECTOR, '#trend_wrap > svg > g:nth-child(5) > g:nth-child(4) > text:nth-child(2)')))
-                ActionChains(browser).move_to_element(element).perform()
+                    (By.CSS_SELECTOR, '#trend_wrap > svg > g:nth-child(5) > g:nth-child(4) > text:nth-child(2) > tspan')))
+                if element:
+                    ActionChains(browser).move_to_element(element).perform()
+                elif element1:
+                    ActionChains(browser).move_to_element(element1).perform()
                 time.sleep(2)
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[1]/dd/select[1]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[1]/dd/select[1]/option[' + str(i+1) + ']').click()
@@ -98,21 +100,28 @@ def spider_index_year(browser,wait):
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[2]/dd/select[2]/option[6]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/p/button[1]').click()
                 time.sleep(3)
-                if os.path.isfile(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) + '-1' + ".png"):
-                    os.remove(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) +'-1' + ".png")
-                browser.save_screenshot(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) + '-1' +".png")
+                if os.path.isfile(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) + '-1' + ".png"):
+                    os.remove(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) +'-1' + ".png")
+                browser.save_screenshot(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) + '-1' +".png")
                 ff.write(str(2013 + i) + '：' + '  ' + value + '_wholeTrence_' + str(i) + '-1' +".png" + '\n')
-                
+                element = wait.until(EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, '#trend_wrap > svg > g:nth-child(5) > g:nth-child(4) > text:nth-child(2) > tspan')))
+                # browser.refresh()
+                # time.sleep(3)
+                element2 = wait.until(EC.presence_of_element_located(
+                    (By.CSS_SELECTOR,'#trend_wrap > svg > g:nth-child(5) > g:nth-child(4) > g:nth-child(8) > text > tspan')))
+                ActionChains(browser).move_to_element(element2).perform()
                 ActionChains(browser).move_to_element(element).perform()
+                time.sleep(2)
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[1]/dd/select[2]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[1]/dd/select[2]/option[7]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[2]/dd/select[2]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/dl[2]/dd/select[2]/option[12]').click()
                 browser.find_element_by_xpath('//*[@id="trend_wrap"]/div[2]/p/button[1]').click()
                 time.sleep(3)
-                if os.path.isfile(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) + '-2' + ".png"):
-                    os.remove(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) +'-2' + ".png")
-                browser.save_screenshot(filepath +  value + 'whole/'+ value+'_wholeTrence_' + str(i) + '-2' +".png")
+                if os.path.isfile(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) + '-2' + ".png"):
+                    os.remove(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) +'-2' + ".png")
+                browser.save_screenshot(filepath +  value + '/whole/'+ value+'_wholeTrence_' + str(i) + '-2' +".png")
                 ff.write(str(2013 + i) + '：' + '  ' + value + '_wholeTrence_' + str(i) + '-2' +".png" + '\n')
             ff.close()
             time.sleep(random.randint(2,6))
@@ -121,12 +130,12 @@ def spider_index_year(browser,wait):
             print(e)
         print(value)
     fff.close()
-    browser.close()
+    #browser.close()
 def spider_index_month(browser,wait):
-    df = pd.read_excel(fpath1+'06指数抓取/采集关键词.xlsx')
-    if os.path.isfile(fpath1+'06指数抓取/03 360指数/无效关键词.xlsx'):
-        os.remove(fpath1+'06指数抓取/03 360指数/无效关键词.xlsx')
-    fff = open(fpath1+'06指数抓取/03 360指数/无效关键词.txt','a',encoding='utf-8')
+    df = pd.read_excel(fpath1+'/采集关键词.xlsx')
+    if os.path.isfile(filepath+'/无效关键词.xlsx'):
+        os.remove(filepath+'/无效关键词.xlsx')
+    fff = open(filepath+'/无效关键词.txt','a',encoding='utf-8')
     for value in df['关键字'].values:
         try:
             input2 = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,'#header > div.wrap.clearfix > div.search > form > input[type="text"]')))
@@ -173,6 +182,10 @@ def spider_index_month(browser,wait):
         print(value)
     fff.close()
     browser.close()
+fpath1 = './'
+filepath = './2013-2017/'
+#filepath = './2018/'
 if __name__ == '__main__':
     driver,wait = login()
     spider_index_year(driver,wait)
+    spider_index_month(driver, wait)

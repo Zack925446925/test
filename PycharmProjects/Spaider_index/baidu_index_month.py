@@ -13,7 +13,7 @@ import random
 # chrome_options = Options()
 # chrome_options.add_argument("--disable-extensions")
 # browser = webdriver.Chrome(chrome_options=chrome_options)
-fpath = r"E:\01复硕正态\01数据爬取\06指数抓取\01百度指数\2018年指数/"
+fpath = "./"
 browser = webdriver.PhantomJS()
 #browser = webdriver.Chrome()
 wait = WebDriverWait(browser, 10)
@@ -41,7 +41,7 @@ def openbrowser():
     # 输入账号密码
     account = []
     try:
-        fileaccount = open(r"E:\01复硕正态\07数据清洗/account.txt")
+        fileaccount = open("./account.txt")
         accounts = fileaccount.readlines()
         for acc in accounts:
             account.append(acc.strip())
@@ -157,7 +157,7 @@ def fun_month(driver,name):
     f.write(str(2018) + '：' + '  ' + name + '_mobilTrence_' +  ".png" + '\n')
     f.close()
 def spider():
-    df = pd.read_excel(r'E:\01复硕正态\01数据爬取\06指数抓取/采集关键词.xlsx')
+    df = pd.read_excel('./采集关键词.xlsx')
     openbrowser()
     # 新开一个窗口，通过执行js来新开一个窗口
     js = 'window.open("http://index.baidu.com");'
@@ -181,7 +181,7 @@ def spider():
     if is_element_exist(browser, 'TANGRAM_12__userName'):  # browser.find_element_by_id("TANGRAM_12__userName"):
         account = []
         try:
-            fileaccount = open(r"E:\01复硕正态\01数据爬取\06指数抓取\01百度指数/account.txt")
+            fileaccount = open("./account.txt")
             accounts = fileaccount.readlines()
             for acc in accounts:
                 account.append(acc.strip())

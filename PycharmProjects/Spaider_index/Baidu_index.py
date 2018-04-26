@@ -15,8 +15,8 @@ import os
 # chrome_options.add_argument("--disable-extensions")
 # browser = webdriver.Chrome(chrome_options=chrome_options)
 import random
-browser = webdriver.PhantomJS()
-#browser = webdriver.Chrome()
+#browser = webdriver.PhantomJS()
+browser = webdriver.Chrome()
 wait = WebDriverWait(browser, 10)
 
 
@@ -76,7 +76,7 @@ def openbrowser():
     # 输入账号密码
     account = []
     try:
-        fileaccount = open(r"E:\01复硕正态\07数据清洗/account.txt")
+        fileaccount = open("./account.txt")
         accounts = fileaccount.readlines()
         for acc in accounts:
             account.append(acc.strip())
@@ -103,7 +103,7 @@ def openbrowser():
         input_yz.send_keys(aa)
     browser.find_element_by_id("TANGRAM__PSP_3__submit").click()
 def fun(drive, name):
-    path = r"E:\01复硕正态\01数据爬取\06指数抓取\01百度指数\平年指数/"
+    path = "./"
     if not os.path.exists(path+name):
         os.mkdir(path+name)
     if not os.path.exists(path+name+'/whole'):
@@ -130,7 +130,10 @@ def fun(drive, name):
             drive.find_element_by_xpath('//*[@id="auto_gsid_15"]/div[1]/div[1]/a[7]').click()
         elif is_element_exist_xpath(drive, '//*[@id="auto_gsid_15"]/div[2]/div[1]/a[7]'):
             drive.find_element_by_xpath('//*[@id="auto_gsid_15"]/div[2]/div[1]/a[7]').click()
-        drive.find_element_by_xpath('//*[@id="auto_gsid_16"]/div[1]/span[2]/span[1]/span').click()
+        if is_element_exist_xpath(drive,'//*[@id="auto_gsid_16"]/div[1]/span[2]/span[1]/span'):
+            drive.find_element_by_xpath('//*[@id="auto_gsid_16"]/div[1]/span[2]/span[1]/span').click()
+        elif is_element_exist_xpath(drive,'//*[@id="auto_gsid_16"]/div[2]/span[2]/span[1]/span'):
+            drive.find_element_by_xpath('//*[@id="auto_gsid_16"]/div[2]/span[2]/span[1]/span').click()
         drive.find_element_by_xpath('//*[@id="auto_gsid_17"]/div/a[' + str(i + 1) + ']').click()
         drive.find_element_by_xpath('//*[@id="auto_gsid_16"]/div[1]/span[2]/span[2]/span').click()
         drive.find_element_by_xpath('//*[@id="auto_gsid_18"]/ul/li[1]/a[1]').click()
@@ -216,7 +219,7 @@ def fun(drive, name):
         if is_element_exist_xpath(drive,'//*[@id="auto_gsid_15"]/div[2]/ul/li[1]'):
              drive.find_element_by_xpath('//*[@id="auto_gsid_15"]/div[2]/ul/li[1]').click()
         elif is_element_exist_xpath(drive,'//*[@id="auto_gsid_15"]/div[1]/ul/li[1]'):
-            drive.find_element_by_xpath('//*[@id="auto_gsid_15"]/div[2]/ul/li[1]').click()
+            drive.find_element_by_xpath('//*[@id="auto_gsid_15"]/div[1]/ul/li[1]').click()
 
 
     if is_element_exist_xpath(browser,'//*[@id="auto_gsid_15"]/div[2]/ul/li[2]'):
@@ -304,7 +307,7 @@ def get_index_pic(filepath1, filepath2):
 
 import pandas as pd
 def spider():
-    df = pd.read_excel(r'E:\01复硕正态\01数据爬取\06指数抓取/采集关键词.xlsx')
+    df = pd.read_excel('./采集关键词.xlsx')
     openbrowser()
     # 新开一个窗口，通过执行js来新开一个窗口
     js = 'window.open("http://index.baidu.com");'
@@ -328,7 +331,7 @@ def spider():
     if is_element_exist(browser, 'TANGRAM_12__userName'):  # browser.find_element_by_id("TANGRAM_12__userName"):
         account = []
         try:
-            fileaccount = open(r"E:\01复硕正态\01数据爬取\06指数抓取\01百度指数/account.txt")
+            fileaccount = open("./account.txt")
             accounts = fileaccount.readlines()
             for acc in accounts:
                 account.append(acc.strip())
@@ -342,13 +345,21 @@ def spider():
         browser.find_element_by_id("TANGRAM_12__userName").send_keys(account[0])
         browser.find_element_by_id("TANGRAM_12__password").clear()
         browser.find_element_by_id("TANGRAM_12__password").send_keys(account[1])
+        # if is_element_exist(browser,'TANGRAM_12__verifyCode'):
+        #     browser.find_element_by_id('TANGRAM_12__verifyCode').clear()
+        #     code = input('请输入验证码：')
+        #     browser.find_element_by_id('TANGRAM_12__verifyCode').send_keys(code)
         time.sleep(2)
         browser.find_element_by_id("TANGRAM_12__submit").click()
     time.sleep(5)
     for keyword in df['关键字'].values:
-        print(keyword)
-        fun(browser,keyword)
-        #fun1(browser, keyword)
-        #fun2(browser,keyword)
+        ff = open('./无效关键词.txt','a')
+        try:
+            print(keyword)
+            fun(browser,keyword)
+        except Exception as e:
+            print(e)
+            ff.write(keyword+'\n')
+    ff.close()
     browser.close()
 spider()

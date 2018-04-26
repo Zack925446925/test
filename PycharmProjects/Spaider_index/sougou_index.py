@@ -8,9 +8,9 @@ import random
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-df = pd.read_excel(r'E:\01复硕正态\01数据爬取\06指数抓取/采集关键词.xlsx')
+df = pd.read_excel('./采集关键词.xlsx')
 url = 'http://zhishu.sogou.com/'
-dff = open(r'E:\01复硕正态\01数据爬取\06指数抓取\02搜狗指数/无效关键词.txt','a',encoding='utf-8')
+
 def spider_index_year():
     options = Options()
     browser = webdriver.Chrome(chrome_options=options.add_argument("--headless"))
@@ -24,7 +24,7 @@ def spider_index_year():
     js2 = "var q=document.getElementById('searchButton').click()"
     browser.execute_script(js2)
     for keyword in df['关键字'].values:
-        path = r'E:\01复硕正态\01数据爬取\06指数抓取\02搜狗指数/2018\1-2月/'
+        path = './2016-2017/'
         #js3 = "var q=document.getElementById('labInput').clear()"
         # js4 = "var q=document.getElementById('labInput').clear()"
         # browser.execute_script(js3)
@@ -95,7 +95,7 @@ def spider_index_year():
                 browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/ul/li[7]').click()
                 browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/span[3]').click()
                 browser.find_element_by_xpath( '//*[@id="container"]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/ul/li[12]').click()
-                browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]').click()      
+                browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]').click()
                 js1 = "var q=document.documentElement.scrollTop=10000"
                 browser.execute_script(js1)
                 time.sleep(random.randint(1,4))
@@ -116,7 +116,7 @@ def spider_index_year():
                 browser.save_screenshot(path + r'\mobile/' + keyword + '_mobileTrence_' + str(i) + '-2'+".png")
                 f.write(str(2015 + i) + '：' + '  ' + keyword + '_mobileTrence_' + str(i) +'-2'+ ".png" + '\n')
                 js2 = "var q=document.documentElement.scrollTop=0"
-                browser.execute_script(js2)                         
+                browser.execute_script(js2)
             f.close()
         except Exception as e:
             dff.write(keyword+'\n')
@@ -138,7 +138,7 @@ def spider_index_month():
     js2 = "var q=document.getElementById('searchButton').click()"
     browser.execute_script(js2)
     for keyword in df['关键字'].values:
-        path = r'E:\01复硕正态\01数据爬取\06指数抓取\02搜狗指数/2018\1-2月/'
+        path = './2018/'
         #js3 = "var q=document.getElementById('labInput').clear()"
         # js4 = "var q=document.getElementById('labInput').clear()"
         # browser.execute_script(js3)
@@ -208,9 +208,11 @@ def spider_index_month():
         print(keyword)
     dff.close()
     browser.close()
-
+dff = open('./2016-2017/无效关键词.txt','a',encoding='utf-8')
+#dff = open('./2018/无效关键词.txt','a',encoding='utf-8')
 if __name__ == '__main__':
-    spider_index_month()
+    spider_index_year()
+    #spider_index_month()
 
 
 

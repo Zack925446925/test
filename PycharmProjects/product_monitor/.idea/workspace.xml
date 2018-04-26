@@ -11,33 +11,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="pic_repetition.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pic_repetition.py">
+      <file leaf-file-name="product_monitor_muyulu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product_monitor_muyulu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3588">
-              <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="judge_pic_similar.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/judge_pic_similar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4531">
-              <caret line="206" column="59" lean-forward="true" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transducer_check.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/01复硕正态/08项目/13传感器标记/transducer_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="214" column="24" lean-forward="false" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
+            <state relative-caret-position="547">
+              <caret line="394" column="8" lean-forward="false" selection-start-line="394" selection-start-column="8" selection-end-line="394" selection-end-column="8" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#25#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,18 +26,31 @@
       <file leaf-file-name="judge_pic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/judge_pic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="162" column="26" lean-forward="true" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
+            <state relative-caret-position="-166">
+              <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+              <folding>
+                <element signature="e#1#11#0" expanded="true" />
+                <marker date="1524713453636" expanded="true" signature="7057:7097" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_process.py" pinned="false" current-in-tab="true">
+        <entry file="file://E:/Learning/【13】数据分析（进阶）/项目1/data_process.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1224">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="judge_pic_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/judge_pic_1.py">
+      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-447">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="575">
+              <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -66,18 +59,8 @@
       <file leaf-file-name="product_monitor_toothpaste.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/product_monitor_toothpaste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="347" column="41" lean-forward="true" selection-start-line="347" selection-start-column="41" selection-end-line="347" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spider_pic_url.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider_pic_url.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="731">
+              <caret line="334" column="38" lean-forward="false" selection-start-line="334" selection-start-column="30" selection-end-line="334" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -138,18 +121,19 @@
         <option value="E:/01复硕正态/04原始代码/skinapi.py" />
         <option value="E:/01复硕正态/08项目/11分布式爬虫/tutorial/tutorial/items.py" />
         <option value="E:/01复硕正态/08项目/10皮肤测试数据获取/skinapi.py" />
-        <option value="$PROJECT_DIR$/test2.py" />
         <option value="E:/01复硕正态/08项目/13传感器标记/transducer_check.py" />
         <option value="$PROJECT_DIR$/spider_pic_url.py" />
-        <option value="$PROJECT_DIR$/product_monitor_muyulu.py" />
         <option value="$PROJECT_DIR$/product_monitor_toothpaste.py" />
-        <option value="$PROJECT_DIR$/judge_pic.py" />
-        <option value="$PROJECT_DIR$/judge_pic_similar.py" />
         <option value="$PROJECT_DIR$/pic_repetition.py" />
+        <option value="$PROJECT_DIR$/judge_pic_similar.py" />
+        <option value="$PROJECT_DIR$/test2.py" />
+        <option value="$PROJECT_DIR$/product_monitor_muyulu.py" />
+        <option value="$PROJECT_DIR$/GUI.py" />
+        <option value="$PROJECT_DIR$/judge_pic.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -170,8 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,15 +161,12 @@
               <item name="product_monitor" type="b2602c69:ProjectViewProjectNode" />
               <item name="product_monitor" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="product_monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="product_monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="pic_log" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,8 +185,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pic_repetition">
-    <configuration name="judge_pic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.GUI">
+    <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -219,7 +198,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="product_monitor" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/judge_pic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,7 +237,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="product_monitor_muyulu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -270,42 +249,42 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="product_monitor" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/product_monitor_muyulu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="product_monitor_toothpaste" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="wx-process-newofonline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="E:/01复硕正态/04原始代码" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="product_monitor" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/product_monitor_toothpaste.py" />
+      <option name="SCRIPT_NAME" value="E:/01复硕正态/04原始代码/wx-process-newofonline.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.pic_repetition" />
-      <item index="1" class="java.lang.String" itemvalue="Python.product_monitor_muyulu" />
-      <item index="2" class="java.lang.String" itemvalue="Python.judge_pic" />
-      <item index="3" class="java.lang.String" itemvalue="Python.judge_pic_similar" />
-      <item index="4" class="java.lang.String" itemvalue="Python.product_monitor_toothpaste" />
+      <item index="1" class="java.lang.String" itemvalue="Python.judge_pic_similar" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GUI" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wx-process-newofonline" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pic_repetition" />
-        <item index="1" class="java.lang.String" itemvalue="Python.judge_pic_similar" />
-        <item index="2" class="java.lang.String" itemvalue="Python.product_monitor_toothpaste" />
-        <item index="3" class="java.lang.String" itemvalue="Python.judge_pic" />
-        <item index="4" class="java.lang.String" itemvalue="Python.product_monitor_muyulu" />
+        <item index="0" class="java.lang.String" itemvalue="Python.GUI" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.wx-process-newofonline" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pic_repetition" />
+        <item index="4" class="java.lang.String" itemvalue="Python.judge_pic_similar" />
       </list>
     </recent_temporary>
   </component>
@@ -323,19 +302,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18736501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10205184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -363,41 +342,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="47" column="67" lean-forward="true" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5586">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/compat/numpy/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7169">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/json.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -499,13 +443,7 @@
       </provider>
     </entry>
     <entry file="file://E:/01复硕正态/04原始代码/skin.py" />
-    <entry file="file://E:/01复硕正态/08项目/10皮肤测试数据获取/skin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/01复硕正态/08项目/10皮肤测试数据获取/skin.py" />
     <entry file="file://E:/01复硕正态/04原始代码/skinapi.py" />
     <entry file="file://E:/01复硕正态/08项目/07评论分析/comment_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -522,9 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2438">
           <caret line="112" column="21" lean-forward="false" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,13 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/match_bill.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
@@ -577,51 +505,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider_pic_url.py">
+    <entry file="file://E:/01复硕正态/04原始代码/jd_geturl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="-414">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/product_monitor_muyulu.py">
+    <entry file="file://E:/01复硕正态/04原始代码/jd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="397" column="10" lean-forward="true" selection-start-line="397" selection-start-column="10" selection-end-line="397" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pic_repetition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3588">
-          <caret line="161" column="26" lean-forward="true" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product_monitor_toothpaste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="347" column="41" lean-forward="true" selection-start-line="347" selection-start-column="41" selection-end-line="347" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/judge_pic_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-447">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/judge_pic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="162" column="26" lean-forward="true" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -629,16 +523,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="214" column="24" lean-forward="false" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/judge_pic_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2241">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/judge_pic_similar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4531">
-          <caret line="206" column="59" lean-forward="true" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
+        <state relative-caret-position="184">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider_pic_url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pic_repetition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="138" column="25" lean-forward="true" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py" />
+    <entry file="file://$PROJECT_DIR$/product_monitor_muyulu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="394" column="8" lean-forward="false" selection-start-line="394" selection-start-column="8" selection-end-line="394" selection-end-column="8" />
+          <folding>
+            <element signature="e#25#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/01复硕正态/04原始代码/wx-process-newofonline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_monitor_toothpaste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="334" column="38" lean-forward="false" selection-start-line="334" selection-start-column="30" selection-end-line="334" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/judge_pic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
+            <marker date="1524713453636" expanded="true" signature="7057:7097" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Learning/【13】数据分析（进阶）/项目1/data_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
